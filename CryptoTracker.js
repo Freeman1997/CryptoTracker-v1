@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Coin from './Coin'
+import Coin from './Coin';
+import "./Coin.css";
 
 export default function CryptoTracker() {
   const [coins, setCoins] = useState([])
