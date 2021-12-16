@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Coin from './Coin';
-import "./Coin.css";
+import Coin from './Coin'
+import './Coin.css'
 
 export default function CryptoTracker() {
   const [coins, setCoins] = useState([])
@@ -55,6 +55,7 @@ export default function CryptoTracker() {
                 <p className="coinData volume">24h Volume</p>
                 <p className="coinData percent">24h</p>
                 <p className="coinData marketCap">Mkt Cap</p>
+                <p className="coinData lastUpdate">Last Updated</p>
               </div>
             </div>
           </div>
@@ -72,6 +73,7 @@ export default function CryptoTracker() {
               marketCap={coin.market_cap}
               priceChange={coin.price_change_percentage_24h}
               volume={coin.total_volume}
+              lastUpdate={coin.last_updated}
             />
           )
         })}

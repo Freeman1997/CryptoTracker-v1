@@ -1,3 +1,4 @@
+import moment from 'moment'
 import React from 'react'
 
 export default function Coin({
@@ -9,6 +10,7 @@ export default function Coin({
   volume,
   priceChange,
   marketCap,
+  lastUpdate
 }) {
   return (
     <>
@@ -26,18 +28,19 @@ export default function Coin({
               <p className="coinData volume"> $ {volume.toLocaleString()} </p>{' '}
               {priceChange < 0 ? (
                 <p className="coinData percent red">
-                  {' '}
                   {priceChange.toFixed(2)} %
                 </p>
               ) : (
                 <p className="coinData percent green">
-                  {' '}
                   {priceChange.toFixed(2)} %
                 </p>
               )}
               <p className="coinData marketCap">
-                $ {marketCap.toLocaleString()}{' '}
-              </p>{' '}
+                $ {marketCap.toLocaleString()}
+              </p>
+              <p className="coinData lastUpdated">
+                { moment(lastUpdate).startOf('mm').fromNow()}               
+              </p>
             </div>{' '}
           </div>{' '}
         </div>{' '}
