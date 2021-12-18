@@ -28,11 +28,11 @@ export default function Coin({
               <p className="coinData volume"> $ {volume.toLocaleString()} </p>{' '}
               {priceChange < 0 ? (
                 <p className="coinData percent red">
-                  {priceChange.toFixed(2)} %
+                  $ {priceChange?.toFixed(2)}
                 </p>
               ) : (
                 <p className="coinData percent green">
-                  {priceChange.toFixed(2)} %
+                 $ +{priceChange?.toFixed(2)}
                 </p>
               )}
               <p className="coinData marketCap">

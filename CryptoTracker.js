@@ -71,7 +71,7 @@ export default function CryptoTracker() {
               cryptoSymbol={coin.symbol}
               price={coin.current_price}
               marketCap={coin.market_cap}
-              priceChange={coin.price_change_percentage_24h}
+              priceChange={coin.price_change_24h}
               volume={coin.total_volume}
               lastUpdate={coin.last_updated}
             />
